@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
 
 .title {
 background-color: green;
@@ -11,26 +19,40 @@ text-align: center;
   height: 85vh;
   display:flex;
 }
-.card{
-  background-color: yellow;
-  padding: 8px;
-  margin: 10px;
+.row {
+width: 100%;
+height: calc(43.33% - 80px);
+margin: 5px;
+}
+.container{
+  height: 100%;
+  width: 100%;
 
-  display: flex;
+}
+
+.cardContainer{
+  background-color: yellow;
+  height: 75%;
+  box-sizing: border-box;
+  margin: 10px;
+  width: calc(16.66% - 24px);
+  display: inline-block;
+
 }
 .statsTitle{
   display:inline-block;
   background-color: blue;
-  width: 30%;
-  text-align: flex;
+  width: 25%;
+
 
 
 }
 .stats{
 display: inline-block;
 padding: 15px;
-margin: 15px;
-width: 60%;
+margin: 15px 5px 15px 35px;
+width: 65%;
+height: 11%;
 background-color: purple;
 text-align: center;
 }
