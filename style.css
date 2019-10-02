@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-image: url('./assets/images/lfz-background.jpg');
 }
 
 
@@ -13,15 +14,14 @@ height: 15vh;
 display: inline-block;
 width: 100%;
 text-align: center;
+font-size: 80px;
 }
 .main {
 
   height: 85vh;
   display:flex;
 }
-.main, .title {
-  background-image: url('./assets/images/lfz-background.jpg');
-}
+
 .row {
 width: 100%;
 height: calc(43.33% - 80px);
@@ -51,7 +51,7 @@ background-image: url('./assets/images/lfz-card.jpg');
 
 }
 .cardBack, .cardFront{
-/* background-image: url('./assets/images/lfz-card.jpg'); */
+
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
