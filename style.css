@@ -8,21 +8,24 @@ body {
 }
 
 .title {
-background-color: green;
+
 height: 15vh;
 display: inline-block;
 width: 100%;
 text-align: center;
 }
 .main {
-  background-color: red;
+
   height: 85vh;
   display:flex;
+}
+.main, .title {
+  background-image: url('./assets/images/lfz-background.jpg');
 }
 .row {
 width: 100%;
 height: calc(43.33% - 80px);
-margin: 5px;
+margin: 4px;
 }
 .container{
   height: 100%;
@@ -31,21 +34,45 @@ margin: 5px;
 }
 
 .cardContainer{
-  background-color: yellow;
+
   height: 75%;
   box-sizing: border-box;
   margin: 10px;
   width: calc(16.66% - 24px);
   display: inline-block;
+  position: relative;
+  /* background-image: url('/Users/krisringler/lfz/memory_match/assets/images/lfz-card.jpg');
+  background-size: cover;
+  background-position: center; */
 
 }
-.statsTitle{
+.cardBack{
+background-image: url('./assets/images/lfz-card.jpg');
+
+}
+.cardBack, .cardFront{
+/* background-image: url('./assets/images/lfz-card.jpg'); */
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+position: absolute;
+height: 100%;
+width: 100%;
+display: inline-block;
+}
+
+.cardFront{
+  background-image: url('./assets/images/mysql-logo.jpg');
+}
+
+.hidden{
+  display: none;
+}
+
+.sideBar{
   display:inline-block;
-  background-color: blue;
+
   width: 25%;
-
-
-
 }
 .stats{
 display: inline-block;
