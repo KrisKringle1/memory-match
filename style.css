@@ -61,8 +61,33 @@ width: 100%;
 display: inline-block;
 }
 
-.cardFront{
+.card1{
   background-image: url('./assets/images/mysql-logo.jpg');
+}
+.card2{
+  background-image: url('./assets/images/node-logo.png');
+}
+
+.card3{
+  background-image: url('./assets/images/gitHub-logo.png');
+}
+.card4{
+  background-image: url('./assets/images/docker-logo.jpg');
+}
+.card5{
+  background-image: url('./assets/images/css-logo.png');
+}
+.card6{
+  background-image: url('./assets/images/html-logo.png');
+}
+.card7{
+  background-image: url('./assets/images/js-logo.png');
+}
+.card8{
+  background-image: url('./assets/images/php-logo.jpeg');
+}
+.card9{
+  background-image: url('./assets/images/react-logo.png');
 }
 
 .hidden{
