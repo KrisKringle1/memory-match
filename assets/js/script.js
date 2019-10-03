@@ -3,6 +3,9 @@ $(document).ready(initializeApp)
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = 0;
+var firstImage = null;
+var secondImage = null;
+
 
 function initializeApp() {
   $('.cardContainer').on("click", handleCardClick)
@@ -16,18 +19,31 @@ function handleCardClick(event) {
     firstCardClicked = $(event.currentTarget);
   } else {
     secondCardClicked = $(event.currentTarget);
-    var firstImage = firstCardClicked.find('.cardFront').css('background-image');
-    var secondImage = secondCardClicked.find('.cardFront').css('background-image');
+    firstImage = firstCardClicked.find('.cardFront').css('background-image');
+    secondImage = secondCardClicked.find('.cardFront').css('background-image');
     if (firstImage === secondImage) {
       console.log('its a match!')
       matches++
+      firstImage = null;
+      secondImage = null;
+      firstCardClicked = null;
+      secondCardClicked = null;
     } else {
 
+      setTimeout(resetImages, 1500)
       console.log('keep trying!')
+
     }
 
 
   }
 
 
+}function resetImages(){
+firstCardClicked.find('.cardBack').removeClass('hidden');
+secondCardClicked.find('.cardBack').removeClass('hidden');
+firstImage = null;
+secondImage = null;
+firstCardClicked = null;
+secondCardClicked = null;
 }
