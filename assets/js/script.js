@@ -5,7 +5,7 @@ var secondCardClicked = null;
 var matches = 0;
 var firstImage = null;
 var secondImage = null;
-
+var max_matches = 2;
 
 function initializeApp() {
   $('.cardContainer').on("click", handleCardClick)
@@ -34,9 +34,14 @@ function handleCardClick(event) {
       console.log('keep trying!')
 
     }
+    if (matches === max_matches) {
+      alert('you win!');
 
+
+    }
 
   }
+
 
 
 }function resetImages(){
@@ -46,4 +51,5 @@ firstImage = null;
 secondImage = null;
 firstCardClicked = null;
 secondCardClicked = null;
+
 }
