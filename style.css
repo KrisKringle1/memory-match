@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  background-image: url('./assets/images/lfz-background.jpg');
+  background-image: url('./assets/images/saviors-board.png');
+  background-size: cover;
+
 }
 
 
@@ -23,9 +25,11 @@ font-size: 80px;
 }
 
 .row {
-width: 100%;
+
 height: calc(43.33% - 65px);
 margin: 10px;
+display: flex;
+justify-content: space-between;
 }
 .container{
   height: 100%;
@@ -35,22 +39,28 @@ margin: 10px;
 
 .cardContainer{
 
-  height: 91%;
+  height: 100%;
   box-sizing: border-box;
   margin: 10px;
-  width: calc(16.66% - 24px);
+  width: 10%;
   display: inline-block;
   position: relative;
+  perspective: 1000px;
+  background-color: transparent;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
   /* background-image: url('/Users/krisringler/lfz/memory_match/assets/images/lfz-card.jpg');
   background-size: cover;
   background-position: center; */
 
 }
 .cardBack{
-background-image: url('./assets/images/lfz-card.jpg');
+background-image: url('./assets/images/Card_back-Default.png');
+background-size: 100px;
+
 
 }
-.cardBack, .cardFront{
+.cardFront{
 
 background-repeat: no-repeat;
 background-position: center;
@@ -59,6 +69,22 @@ position: absolute;
 height: 100%;
 width: 100%;
 display: inline-block;
+backface-visibility: hidden;
+}
+.cardBack{
+
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+position: relative;
+height: 100%;
+width: 100%;
+/* transition: transform 0.8s;
+transform-style: preserve-3d; */
+}
+
+.cardFlip{
+  transform: rotateY(180deg);
 }
 
 .card1{

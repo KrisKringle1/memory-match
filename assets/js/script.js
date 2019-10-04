@@ -5,7 +5,7 @@ var secondCardClicked = null;
 var matches = 0;
 var firstImage = null;
 var secondImage = null;
-var max_matches = 9;
+var max_matches = 1;
 var attempts = 0;
 var games_played = 0;
 var accuracy = 0;
@@ -20,7 +20,11 @@ function initializeApp() {
 function handleCardClick(event) {
 //makes the back card disappear
   var clickMe = $(event.currentTarget.lastElementChild)
-  clickMe.toggleClass('hidden');
+
+  clickMe.toggleClass('cardFlip');
+  setTimeout(function(){
+    clickMe.toggleClass('hidden');
+  }, 410)
 //tracking values of each card
   if (firstCardClicked === null) {
     firstCardClicked = $(event.currentTarget);
