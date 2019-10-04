@@ -22,22 +22,28 @@
 
     <aside class="sideBar">
 
+      <div class="stats">Game stats</div>
+
       <div class="stats">Games Played</div>
 
       <!--this will contain the text "games played"-->
-      <div class="stats">games played stats</div>
+      <div class="stats gamesPlayed">
+        <div class="gamesPlayedNumber">
+        </div>
+      </div>
 
       <!--this will contain the stat for games played-->
-      <div class="stats">Attempts</div>
+      <div class="stats">Attempts
+      </div>
 
       <!--this will contain the text "attempts"-->
-      <div class="stats">attempts stats</div>
+      <div class="stats attemptsMade">0</div>
 
       <!--this will contain the attempts stat-->
       <div class="stats">Accuracy</div>
 
       <!--containing the text accuracy-->
-      <div class="stats">accuracy stats</div>
+      <div class="stats gameAccuracy">0%</div>
 
       <!--contains the accuracy stats-->
     </aside>
@@ -158,6 +164,9 @@
 
     </div>
   </main>
+  <div class="alert hidden">You win!
+    <button class="alertButton" onclick="resetStats();">reset game</button>
+  </div>
 <script src="assets/js/script.js"></script>
 </body>
 

@@ -18,14 +18,14 @@ font-size: 80px;
 }
 .main {
 
-  height: 85vh;
+  height: 80vh;
   display:flex;
 }
 
 .row {
 width: 100%;
-height: calc(43.33% - 80px);
-margin: 4px;
+height: calc(43.33% - 65px);
+margin: 10px;
 }
 .container{
   height: 100%;
@@ -35,7 +35,7 @@ margin: 4px;
 
 .cardContainer{
 
-  height: 75%;
+  height: 91%;
   box-sizing: border-box;
   margin: 10px;
   width: calc(16.66% - 24px);
@@ -90,14 +90,15 @@ display: inline-block;
   background-image: url('./assets/images/react-logo.png');
 }
 
-.hidden{
-  display: none;
-}
+
 
 .sideBar{
   display:inline-block;
-
-  width: 25%;
+  text-align: center;
+  width: calc(17% - 20px);
+  height: calc(98% - 20px);
+  box-sizing: border-box;
+  position: relative;
 }
 .stats{
 display: inline-block;
@@ -107,4 +108,31 @@ width: 65%;
 height: 11%;
 background-color: purple;
 text-align: center;
+}
+
+.alert{
+  height: 30%;
+  width: 30%;
+  position: absolute;
+  top: 35%;
+  left: 37%;
+  background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  text-align: center;
+  display: inline-block;
+  font-family: fantasy;
+  font-size: 300%;
+  color: gold;
+
+}
+.alertButton {
+height: 13%;
+width: 16%;
+
+position: absolute;
+top: 74%;
+left: 44%;
+
+}
+.hidden{
+  display: none;
 }
