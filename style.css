@@ -18,14 +18,14 @@ font-size: 80px;
 }
 .main {
 
-  height: 85vh;
+  height: 80vh;
   display:flex;
 }
 
 .row {
 width: 100%;
-height: calc(43.33% - 80px);
-margin: 4px;
+height: calc(43.33% - 65px);
+margin: 10px;
 }
 .container{
   height: 100%;
@@ -35,7 +35,7 @@ margin: 4px;
 
 .cardContainer{
 
-  height: 75%;
+  height: 91%;
   box-sizing: border-box;
   margin: 10px;
   width: calc(16.66% - 24px);
@@ -96,8 +96,11 @@ display: inline-block;
 
 .sideBar{
   display:inline-block;
-
-  width: 25%;
+  text-align: center;
+  width: calc(17% - 20px);
+  height: calc(98% - 20px);
+  box-sizing: border-box;
+  position: relative;
 }
 .stats{
 display: inline-block;

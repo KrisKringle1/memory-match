@@ -1,55 +1,101 @@
 $(document).ready(initializeApp)
-
+//global variables
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = 0;
 var firstImage = null;
 var secondImage = null;
-var max_matches = 2;
+var max_matches = 9;
+var attempts = 0;
+var games_played = 0;
+var accuracy = 0;
+var gamesPlayedNumber = $('.gamesPlayedNumber');
+var attemptsMade = $('.attemptsMade');
+var gameAccuracy = $('.gameAccuracy');
 
 function initializeApp() {
-  $('.cardContainer').on("click", handleCardClick)
+  $('.cardContainer').on("click", handleCardClick);
 }
-
+//when clicking a card
 function handleCardClick(event) {
+//makes the back card disappear
   var clickMe = $(event.currentTarget.lastElementChild)
   clickMe.toggleClass('hidden');
-
+//tracking values of each card
   if (firstCardClicked === null) {
     firstCardClicked = $(event.currentTarget);
   } else {
+//secondCardClicked takes the value of the first card clicked
     secondCardClicked = $(event.currentTarget);
+//jQuery selectors to check if the background images are the same, if they are they match.
     firstImage = firstCardClicked.find('.cardFront').css('background-image');
     secondImage = secondCardClicked.find('.cardFront').css('background-image');
+//attempts incrementor
+
+    console.log(attempts);
     if (firstImage === secondImage) {
       console.log('its a match!')
+//matches incrementor
       matches++
+      attempts++;
       firstImage = null;
       secondImage = null;
       firstCardClicked = null;
       secondCardClicked = null;
     } else {
+//reset images after 1.5 seconds
+      $('.cardContainer').unbind("click");
+      attempts++;
+      setTimeout(function(){
+        $('.cardContainer').on("click", handleCardClick);
+        resetImages()
 
-      setTimeout(resetImages, 1500)
+      }, 1500)
       console.log('keep trying!')
 
+
     }
+
+//alert to announce victory, needs to be changed to a div
+//games played incrementor
     if (matches === max_matches) {
       alert('you win!');
-
+      games_played++;
 
     }
-
+    calculateAccuracy();
   }
+  displayStats();
 
 
 
-}function resetImages(){
+}
+//function that resets images
+function resetImages(){
 firstCardClicked.find('.cardBack').removeClass('hidden');
 secondCardClicked.find('.cardBack').removeClass('hidden');
 firstImage = null;
 secondImage = null;
 firstCardClicked = null;
 secondCardClicked = null;
+// displayStats();
+// calculateAccuracy();
+
+}
+
+function calculateAccuracy(){
+
+  accuracy = matches / attempts;
+
+  console.log(accuracy);
+
+
+}
+
+function displayStats(){
+  gamesPlayedNumber.text(games_played);
+  attemptsMade.text(attempts);
+  gameAccuracy.text(accuracy.toFixed(2) + "%");
+
 
 }
