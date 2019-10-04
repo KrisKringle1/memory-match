@@ -59,8 +59,8 @@ function handleCardClick(event) {
 //alert to announce victory, needs to be changed to a div
 //games played incrementor
     if (matches === max_matches) {
-      alert('you win!');
-      games_played++;
+
+      $('.alert').removeClass('hidden');
 
     }
     calculateAccuracy();
@@ -78,14 +78,13 @@ firstImage = null;
 secondImage = null;
 firstCardClicked = null;
 secondCardClicked = null;
-// displayStats();
-// calculateAccuracy();
+
 
 }
 
 function calculateAccuracy(){
 
-  accuracy = matches / attempts;
+  accuracy = matches / attempts * 100;
 
   console.log(accuracy);
 
@@ -98,4 +97,14 @@ function displayStats(){
   gameAccuracy.text(accuracy.toFixed(2) + "%");
 
 
+
+}
+
+function resetStats(){
+  matches = 0;
+  attempts = 0;
+  games_played++;
+  $('.alert').addClass('hidden');
+  $('.cardBack').removeClass('hidden');
+  displayStats();
 }

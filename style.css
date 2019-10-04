@@ -90,9 +90,7 @@ display: inline-block;
   background-image: url('./assets/images/react-logo.png');
 }
 
-.hidden{
-  display: none;
-}
+
 
 .sideBar{
   display:inline-block;
@@ -110,4 +108,31 @@ width: 65%;
 height: 11%;
 background-color: purple;
 text-align: center;
+}
+
+.alert{
+  height: 30%;
+  width: 30%;
+  position: absolute;
+  top: 35%;
+  left: 37%;
+  background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  text-align: center;
+  display: inline-block;
+  font-family: fantasy;
+  font-size: 300%;
+  color: gold;
+
+}
+.alertButton {
+height: 13%;
+width: 16%;
+
+position: absolute;
+top: 74%;
+left: 44%;
+
+}
+.hidden{
+  display: none;
 }
