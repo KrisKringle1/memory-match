@@ -9,7 +9,7 @@ var max_matches = 9;
 var attempts = 0;
 var games_played = 0;
 var accuracy = 0;
-var gamesPlayedNumber = $('.gamesPlayedNumber');
+var gamesPlayedNumber = $('.gamesPlayed');
 var attemptsMade = $('.attemptsMade');
 var gameAccuracy = $('.gameAccuracy');
 
