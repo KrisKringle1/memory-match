@@ -28,8 +28,8 @@ function handleCardClick(event) {
 //secondCardClicked takes the value of the first card clicked
     secondCardClicked = $(event.currentTarget);
 //jQuery selectors to check if the background images are the same, if they are they match.
-    firstImage = firstCardClicked.find('.cardFront').css('background-image');
-    secondImage = secondCardClicked.find('.cardFront').css('background-image');
+    firstImage = firstCardClicked.find('.innerCard').css('background-image');
+    secondImage = secondCardClicked.find('.innerCard').css('background-image');
 //attempts incrementor
 
     console.log(attempts);
@@ -72,8 +72,8 @@ function handleCardClick(event) {
 }
 //function that resets images
 function resetImages(){
-firstCardClicked.find('.cardBack').removeClass('hidden');
-secondCardClicked.find('.cardBack').removeClass('hidden');
+firstCardClicked.find('.outerCard').removeClass('hidden');
+secondCardClicked.find('.outerCard').removeClass('hidden');
 firstImage = null;
 secondImage = null;
 firstCardClicked = null;
@@ -105,6 +105,6 @@ function resetStats(){
   attempts = 0;
   games_played++;
   $('.alert').addClass('hidden');
-  $('.cardBack').removeClass('hidden');
+  $('.outerCard').removeClass('hidden');
   displayStats();
 }
