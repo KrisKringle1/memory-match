@@ -192,11 +192,11 @@ text-align: center;
 
 }
 .introBox{
-  height: 69%;
-  width: 50%;
+  height: 78%;
+  width: 58%;
   position: absolute;
-  top: 22%;
-  left: 27%;
+  top: 16%;
+  left: 23%;
   background-image: url('./assets/images/hearthstone-opening-gif.gif');
   background-size:cover;
   text-align: center;

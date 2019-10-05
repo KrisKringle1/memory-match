@@ -26,6 +26,7 @@ function playIntroMusic(){
 function initializeApp() {
   $('.cardContainer').on("click", handleCardClick);
 }
+generateCards();
 //when clicking a card
 function handleCardClick(event) {
 //makes the back card disappear
@@ -126,6 +127,7 @@ function generateCards(){
   while(cardAarray.length){
     var randomNumber = Math.floor(Math.random() * cardAarray.length);
     var cardIndex = cardAarray.splice(randomNumber, 1);
-    $
+    $('.container').append($(`<div class="cardContainer"><div class="innerCard ${cardIndex}"></div><div class="outerCard">`));
+
   }
 }
