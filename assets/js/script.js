@@ -15,6 +15,7 @@ var gameAccuracy = $('.gameAccuracy');
 var introMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_Main_Title.mp3');
 var winMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_victory_jingle.mp3');
 
+
 function playIntroMusic(){
   introMusic.play();
   $('.introBox').addClass('hidden');
@@ -117,4 +118,14 @@ function resetStats(){
   $('.alert').addClass('hidden');
   $('.outerCard').removeClass('hidden');
   displayStats();
+}
+
+function generateCards(){
+  var cardAarray = ['card1', 'card1', 'card2', 'card2', 'card3', 'card3', 'card4', 'card4', 'card5', 'card5', 'card6', 'card6','card7', 'card7', 'card8', 'card8','card9', 'card9'];
+
+  while(cardAarray.length){
+    var randomNumber = Math.floor(Math.random() * cardAarray.length);
+    var cardIndex = cardAarray.splice(randomNumber, 1);
+    $
+  }
 }
