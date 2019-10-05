@@ -5,13 +5,22 @@ var secondCardClicked = null;
 var matches = 0;
 var firstImage = null;
 var secondImage = null;
-var max_matches = 9;
+var max_matches = 1;
 var attempts = 0;
 var games_played = 0;
 var accuracy = 0;
 var gamesPlayedNumber = $('.gamesPlayed');
 var attemptsMade = $('.attemptsMade');
 var gameAccuracy = $('.gameAccuracy');
+var introMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_Main_Title.mp3');
+var winMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_victory_jingle.mp3');
+
+function playIntroMusic(){
+  introMusic.play();
+  $('.introBox').addClass('hidden');
+}
+
+
 
 function initializeApp() {
   $('.cardContainer').on("click", handleCardClick);
@@ -28,8 +37,8 @@ function handleCardClick(event) {
 //secondCardClicked takes the value of the first card clicked
     secondCardClicked = $(event.currentTarget);
 //jQuery selectors to check if the background images are the same, if they are they match.
-    firstImage = firstCardClicked.find('.cardFront').css('background-image');
-    secondImage = secondCardClicked.find('.cardFront').css('background-image');
+    firstImage = firstCardClicked.find('.innerCard').css('background-image');
+    secondImage = secondCardClicked.find('.innerCard').css('background-image');
 //attempts incrementor
 
     console.log(attempts);
@@ -59,7 +68,8 @@ function handleCardClick(event) {
 //alert to announce victory, needs to be changed to a div
 //games played incrementor
     if (matches === max_matches) {
-
+      winMusic.play();
+      introMusic.pause();
       $('.alert').removeClass('hidden');
 
     }
@@ -72,8 +82,8 @@ function handleCardClick(event) {
 }
 //function that resets images
 function resetImages(){
-firstCardClicked.find('.cardBack').removeClass('hidden');
-secondCardClicked.find('.cardBack').removeClass('hidden');
+firstCardClicked.find('.outerCard').removeClass('hidden');
+secondCardClicked.find('.outerCard').removeClass('hidden');
 firstImage = null;
 secondImage = null;
 firstCardClicked = null;
@@ -105,6 +115,6 @@ function resetStats(){
   attempts = 0;
   games_played++;
   $('.alert').addClass('hidden');
-  $('.cardBack').removeClass('hidden');
+  $('.outerCard').removeClass('hidden');
   displayStats();
 }

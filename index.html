@@ -14,7 +14,7 @@
 <title>Memory Match</title>
 <body>
 
-  <header class="title">LFZ Memory Match</header> <!--this is where the logo goes--->
+  <header class="title belwelight">LFZ Memory Match</header> <!--this is where the logo goes--->
 
 
 
@@ -22,28 +22,25 @@
 
     <aside class="sideBar">
 
-      <div class="stats">Game stats</div>
+      <div class="stats belwelight" id="stats1">Game stats</div>
 
-      <div class="stats">Games Played</div>
+      <div class="stats belwelight" id="stats2">Games Played</div>
 
       <!--this will contain the text "games played"-->
-      <div class="stats gamesPlayed">
-        <div class="gamesPlayedNumber">
-        </div>
-      </div>
+      <div class="stats belwelight gamesPlayed" id="stats3">0</div>
 
       <!--this will contain the stat for games played-->
-      <div class="stats">Attempts
+      <div class="stats belwelight" id="stats4">Attempts
       </div>
 
       <!--this will contain the text "attempts"-->
-      <div class="stats attemptsMade">0</div>
+      <div class="stats belwelight attemptsMade" id="stats5">0</div>
 
       <!--this will contain the attempts stat-->
-      <div class="stats">Accuracy</div>
+      <div class="stats belwelight" id="stats6">Accuracy</div>
 
       <!--containing the text accuracy-->
-      <div class="stats gameAccuracy">0%</div>
+      <div class="stats belwelight gameAccuracy" id="stats7">0%</div>
 
       <!--contains the accuracy stats-->
     </aside>
@@ -58,74 +55,38 @@
 
       <div class="cardContainer">
 
-        <div class="cardFront card1"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card1"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
 
-        <div class="cardFront card2"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card2"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
 
-        <div class="cardFront card3"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card3"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
 
-        <div class="cardFront card4"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card4"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
 
-        <div class="cardFront card5"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card5"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
 
-        <div class="cardFront card6"></div>
-        <div class="cardBack"></div>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="cardContainer">
-
-        <div class="cardFront card7"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card8"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card9"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card1"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card2"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card3"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card6"></div>
+        <div class="outerCard"></div>
       </div>
 
     </div>
@@ -133,39 +94,79 @@
     <div class="row">
 
       <div class="cardContainer">
-        <div class="cardFront card4"></div>
-        <div class="cardBack"></div>
+
+        <div class="innerCard card7"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
-        <div class="cardFront card5"></div>
-        <div class="cardBack"></div>
+
+        <div class="innerCard card8"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
-        <div class="cardFront card6"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card9"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
-        <div class="cardFront card7"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card1"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
-        <div class="cardFront card8"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card2"></div>
+        <div class="outerCard"></div>
       </div>
 
       <div class="cardContainer">
-        <div class="cardFront card9"></div>
-        <div class="cardBack"></div>
+        <div class="innerCard card3"></div>
+        <div class="outerCard"></div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="cardContainer">
+        <div class="innerCard card4"></div>
+        <div class="outerCard"></div>
+      </div>
+
+      <div class="cardContainer">
+        <div class="innerCard card5"></div>
+        <div class="outerCard"></div>
+      </div>
+
+      <div class="cardContainer">
+        <div class="innerCard card6"></div>
+        <div class="outerCard"></div>
+      </div>
+
+      <div class="cardContainer">
+        <div class="innerCard card7"></div>
+        <div class="outerCard"></div>
+      </div>
+
+      <div class="cardContainer">
+        <div class="innerCard card8"></div>
+        <div class="outerCard"></div>
+      </div>
+
+      <div class="cardContainer">
+        <div class="innerCard card9"></div>
+        <div class="outerCard"></div>
       </div>
 
     </div>
   </main>
-  <div class="alert hidden">You win!
-    <button class="alertButton" onclick="resetStats();">reset game</button>
+  <div class="introBox belwelight">Click here to play!
+    <button class="alertButton belwelight" onclick="playIntroMusic();">Start game</button>
+  </div>
+
+  <div class="alert belwelight hidden">You win!
+    <button class="alertButton belwelight" onclick="resetStats();">reset game</button>
   </div>
 <script src="assets/js/script.js"></script>
 </body>
