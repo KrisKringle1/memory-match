@@ -111,7 +111,7 @@ width: 100%;
 /* display: inline-block; */
 }
 .innerCard{
-  background-size: cover;
+  background-size: contain;
   /* background-size: 100px; */
   display: inline-block;
 }
@@ -185,7 +185,9 @@ text-align: center;
   background-image: url('./assets/images/win-gif.gif');
   background-size:cover;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
   font-size: 300%;
   color: gold;
@@ -200,7 +202,9 @@ text-align: center;
   background-image: url('./assets/images/hearthstone-opening-gif.gif');
   background-size:cover;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   border-radius: 25px;
   font-size: 300%;
   color: gold;
