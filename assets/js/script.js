@@ -35,9 +35,11 @@ function handleCardClick(event) {
 //tracking values of each card
   if (firstCardClicked === null) {
     firstCardClicked = $(event.currentTarget);
+    firstCardClicked.css('pointer-events', 'none');
   } else {
 //secondCardClicked takes the value of the first card clicked
     secondCardClicked = $(event.currentTarget);
+    secondCardClicked.css('pointer-events', 'none');
 //jQuery selectors to check if the background images are the same, if they are they match.
     firstImage = firstCardClicked.find('.innerCard').css('background-image');
     secondImage = secondCardClicked.find('.innerCard').css('background-image');
@@ -58,8 +60,11 @@ function handleCardClick(event) {
       $('.cardContainer').unbind("click");
       attempts++;
       setTimeout(function(){
+        firstCardClicked.css('pointer-events', "");
+        secondCardClicked.css('pointer-events', "");
         $('.cardContainer').on("click", handleCardClick);
         resetImages()
+
 
       }, 1500)
       console.log('keep trying!')
