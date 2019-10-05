@@ -179,9 +179,25 @@ text-align: center;
   top: 31%;
   left: 31%;
   background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
-  background-size: cover
+  background-size:cover;
   text-align: center;
   display: inline-block;
+
+  font-size: 300%;
+  color: gold;
+
+}
+.introBox{
+  height: 45%;
+  width: 40%;
+  position: absolute;
+  top: 31%;
+  left: 31%;
+  background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  background-size:cover;
+  text-align: center;
+  display: inline-block;
+
   font-size: 300%;
   color: gold;
 
