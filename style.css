@@ -1,9 +1,19 @@
 body {
   margin: 0;
-  background-image: url('./assets/images/SAVIORS_OF_ULDUM_BOARD.png');
+  background-image: url('./assets/images/expansionBg-flat-7d0981e5817773ca153c92bd7bb882c9fe38cdd91acc3942a8b1bb5d607fca2a25f7236d526e81e2f1d288f2621765835f3069c3d9c4fcec4e74129693f9724b.jpg');
   background-size: cover;
 }
+@font-face {
+    font-family: 'belwelight';
+    src: url('./assets/belwe/BelweLightBT.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+.belwelight{
+  font-family: 'belwelight';
+}
 
 * {
   box-sizing: border-box;
@@ -16,8 +26,11 @@ display: inline-block;
 width: 100%;
 text-align: center;
 font-size: 80px;
-font-family: fantasy;
-color: gold;
+  background: -webkit-linear-gradient(#73471C, #FCD237);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+font-weight: bold;
+
 }
 .main {
 
@@ -36,7 +49,7 @@ margin: 10px;
 
 }
 .stats{
-  font-family: fantasy;
+
   font-size: large;
 }
 #stats1, #stats7 {
@@ -79,47 +92,64 @@ border-radius: 50px;
 
 }
 .outerCard{
-background-image: url('./assets/images/lfz-card.jpg');
+background-image: url('./assets/images/Card_back-Legend-202x300.png');
+background-size: contain;
+display: inline-block;
 
 }
 .outerCard, .innerCard{
 
 background-repeat: no-repeat;
 background-position: center;
-background-size: cover;
+/* background-size: cover; */
 position: absolute;
 height: 100%;
 width: 100%;
-display: inline-block;
+/* display: inline-block; */
+}
+.innerCard{
+  background-size: contain;
+  background-size: 80%;
+  display: inline-block;
 }
 
 .card1{
-  background-image: url('./assets/images/mysql-logo.jpg');
+  background-image: url('./assets/images/enUS_HighInquisitorWhitemane.png');
+  background-size: cover;
+
 }
 .card2{
-  background-image: url('./assets/images/node-logo.png');
+  background-image: url('./assets/images/enUS_Brightwing.png');
+  background-size: cover;
 }
 
 .card3{
-  background-image: url('./assets/images/gitHub-logo.png');
+  background-image: url('./assets/images/enUS_Siegebreaker.png');
+  background-size: cover;
 }
 .card4{
-  background-image: url('./assets/images/docker-logo.jpg');
+  background-image: url('./assets/images/New_enUS_EVILMiscreant.png');
+  background-size: contain;
 }
 .card5{
-  background-image: url('./assets/images/css-logo.png');
+  background-image: url('./assets/images/New_enUS_ArchivistElysiana.png');
+  background-size: contain;
 }
 .card6{
-  background-image: url('./assets/images/html-logo.png');
+  background-image: url('./assets/images/ArchmageVargoth_enUS.png');
+  background-size: cover;
 }
 .card7{
-  background-image: url('./assets/images/js-logo.png');
+  background-image: url('./assets/images/ArchVillainRafaam_enUS.png');
+  background-size: cover;
 }
 .card8{
-  background-image: url('./assets/images/php-logo.jpeg');
+  background-image: url('./assets/images/BaristaLynchen_enUS.png');
+  background-size: cover;
 }
 .card9{
-  background-image: url('./assets/images/react-logo.png');
+  background-image: url('./assets/images/AzeriteElemental_enUS.png');
+  background-size: cover;
 }
 
 
@@ -143,15 +173,15 @@ text-align: center;
 }
 
 .alert{
-  height: 30%;
-  width: 30%;
+  height: 45%;
+  width: 40%;
   position: absolute;
-  top: 35%;
-  left: 37%;
+  top: 31%;
+  left: 31%;
   background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  background-size: cover
   text-align: center;
   display: inline-block;
-  font-family: fantasy;
   font-size: 300%;
   color: gold;
 
@@ -159,10 +189,11 @@ text-align: center;
 .alertButton {
 height: 13%;
 width: 16%;
-
+background-image: linear-gradient(#73471C, #FCD237);
 position: absolute;
 top: 74%;
 left: 44%;
+padding: 0px;
 
 }
 .hidden{
