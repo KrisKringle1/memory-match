@@ -178,7 +178,7 @@ text-align: center;
   position: absolute;
   top: 31%;
   left: 31%;
-  background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  background-image: url('./assets/images/win-gif.gif');
   background-size:cover;
   text-align: center;
   display: inline-block;
@@ -188,16 +188,16 @@ text-align: center;
 
 }
 .introBox{
-  height: 45%;
+  height: 59%;
   width: 40%;
   position: absolute;
-  top: 31%;
+  top: 22%;
   left: 31%;
-  background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  background-image: url('./assets/images/hearthstone-opening-gif.gif');
   background-size:cover;
   text-align: center;
   display: inline-block;
-
+  border-radius: 25px;
   font-size: 300%;
   color: gold;
 
@@ -209,7 +209,9 @@ background-image: linear-gradient(#73471C, #FCD237);
 position: absolute;
 top: 74%;
 left: 44%;
-padding: 0px;
+padding: 5px;
+font-size: 15px;
+border-radius: 25px;
 
 }
 .hidden{
