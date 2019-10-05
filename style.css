@@ -35,18 +35,19 @@ font-weight: bold;
 .main {
 
   height: 80vh;
-  display:flex;
+
+
 }
 
-.row {
+/* .row {
 width: 100%;
 height: calc(43.33% - 65px);
 margin: 10px;
-}
+} */
 .container{
-  height: 100%;
-  width: 100%;
-
+  height: 85vh;
+  width: 80vw;
+  display: inline-block;
 }
 .stats{
 
@@ -80,10 +81,10 @@ border-radius: 50px;
 
 .cardContainer{
 
-  height: 91%;
+  height: 30%;
   box-sizing: border-box;
   margin: 10px;
-  width: calc(16.66% - 24px);
+  width: 14%;
   display: inline-block;
   position: relative;
   /* background-image: url('/Users/krisringler/lfz/memory_match/assets/images/lfz-card.jpg');
@@ -96,6 +97,7 @@ background-image: url('./assets/images/Card_back-Legend-202x300.png');
 background-size: contain;
 display: inline-block;
 
+
 }
 .outerCard, .innerCard{
 
@@ -105,51 +107,52 @@ background-position: center;
 position: absolute;
 height: 100%;
 width: 100%;
+
 /* display: inline-block; */
 }
 .innerCard{
-  background-size: contain;
-  background-size: 80%;
+  background-size: cover;
+  /* background-size: 100px; */
   display: inline-block;
 }
 
 .card1{
   background-image: url('./assets/images/enUS_HighInquisitorWhitemane.png');
-  background-size: cover;
+  background-size: 135%;
 
 }
 .card2{
   background-image: url('./assets/images/enUS_Brightwing.png');
-  background-size: cover;
+  background-size: 135%;
 }
 
 .card3{
   background-image: url('./assets/images/enUS_Siegebreaker.png');
-  background-size: cover;
+  background-size: 135%;
 }
 .card4{
   background-image: url('./assets/images/New_enUS_EVILMiscreant.png');
-  background-size: contain;
+  background-size: 89%;
 }
 .card5{
   background-image: url('./assets/images/New_enUS_ArchivistElysiana.png');
-  background-size: contain;
+  background-size: 88%;
 }
 .card6{
   background-image: url('./assets/images/ArchmageVargoth_enUS.png');
-  background-size: cover;
+  background-size: 135%;
 }
 .card7{
   background-image: url('./assets/images/ArchVillainRafaam_enUS.png');
-  background-size: cover;
+  background-size: 135%;
 }
 .card8{
   background-image: url('./assets/images/BaristaLynchen_enUS.png');
-  background-size: cover;
+  background-size: 135%;
 }
 .card9{
   background-image: url('./assets/images/AzeriteElemental_enUS.png');
-  background-size: cover;
+  background-size: 135%;
 }
 
 
@@ -158,7 +161,8 @@ width: 100%;
   display:inline-block;
   text-align: center;
   width: calc(17% - 20px);
-  height: calc(98% - 20px);
+  height: 100%;
+  bottom: 8%;
   box-sizing: border-box;
   position: relative;
 }
@@ -188,11 +192,11 @@ text-align: center;
 
 }
 .introBox{
-  height: 59%;
-  width: 40%;
+  height: 78%;
+  width: 58%;
   position: absolute;
-  top: 22%;
-  left: 31%;
+  top: 16%;
+  left: 23%;
   background-image: url('./assets/images/hearthstone-opening-gif.gif');
   background-size:cover;
   text-align: center;
