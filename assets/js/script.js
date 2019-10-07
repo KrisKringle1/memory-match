@@ -14,7 +14,7 @@ var attemptsMade = $('.attemptsMade');
 var gameAccuracy = $('.gameAccuracy');
 var introMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_Main_Title.mp3');
 var winMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_victory_jingle.mp3');
-
+var matchMusic = new Audio('/Users/krisringler/lfz/memory_match/assets/media.io_Holy_Heal_Cast_01.mp3');
 
 function playIntroMusic(){
   introMusic.play();
@@ -55,6 +55,7 @@ function handleCardClick(event) {
       secondImage = null;
       firstCardClicked = null;
       secondCardClicked = null;
+      matchMusic.play();
     } else {
 //reset images after 1.5 seconds
       $('.cardContainer').unbind("click");
