@@ -1,174 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<!-- <script src="assets/js/script.js"></script> -->
+	</head>
+	<title>Memory Match</title>
+	<body>
+		<header class="title belwelight">Hearth Match</header>
+		<!--this is where the logo goes--->
 
+		<main class="main">
+			<aside class="sideBar">
+				<div class="stats belwelight" id="stats1">Game stats</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link rel="stylesheet" href="style.css">
-<!-- <script src="assets/js/script.js"></script> -->
+				<div class="stats belwelight" id="stats2">Games Played</div>
 
+				<!--this will contain the text "games played"-->
+				<div class="stats belwelight gamesPlayed" id="stats3">0</div>
 
+				<!--this will contain the stat for games played-->
+				<div class="stats belwelight" id="stats4">Attempts</div>
 
+				<!--this will contain the text "attempts"-->
+				<div class="stats belwelight attemptsMade" id="stats5">0</div>
 
-</head>
-<title>Memory Match</title>
-<body>
+				<!--this will contain the attempts stat-->
+				<div class="stats belwelight" id="stats6">Accuracy</div>
 
-  <header class="title">LFZ Memory Match</header> <!--this is where the logo goes--->
+				<!--containing the text accuracy-->
+				<div class="stats belwelight gameAccuracy" id="stats7">0%</div>
 
+				<!--contains the accuracy stats-->
+			</aside>
+			<!--this is just the title for the stats elements-->
 
+			<!--adding a comment for test purposes-->
+			<div class="container"></div>
+		</main>
+		<div class="introBox belwelight">
+			Match 9 Cards to win! <br />
+			Click Here to Play!
+			<button class="alertButton belwelight" onclick="playIntroMusic();">
+				Start game
+			</button>
+		</div>
 
-  <main class="main">
-
-    <aside class="sideBar">
-
-      <div class="stats">Game stats</div>
-
-      <div class="stats">Games Played</div>
-
-      <!--this will contain the text "games played"-->
-      <div class="stats gamesPlayed">
-        <div class="gamesPlayedNumber">
-        </div>
-      </div>
-
-      <!--this will contain the stat for games played-->
-      <div class="stats">Attempts
-      </div>
-
-      <!--this will contain the text "attempts"-->
-      <div class="stats attemptsMade">0</div>
-
-      <!--this will contain the attempts stat-->
-      <div class="stats">Accuracy</div>
-
-      <!--containing the text accuracy-->
-      <div class="stats gameAccuracy">0%</div>
-
-      <!--contains the accuracy stats-->
-    </aside>
-    <!--this is just the title for the stats elements-->
-
-<!--adding a comment for test purposes-->
-  <div class="container">
-
-      <!--all cards-->
-    <div class="row">
-
-
-      <div class="cardContainer">
-
-        <div class="cardFront card1"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card2"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card3"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card4"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card5"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card6"></div>
-        <div class="cardBack"></div>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="cardContainer">
-
-        <div class="cardFront card7"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-
-        <div class="cardFront card8"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card9"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card1"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card2"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card3"></div>
-        <div class="cardBack"></div>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="cardContainer">
-        <div class="cardFront card4"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card5"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card6"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card7"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card8"></div>
-        <div class="cardBack"></div>
-      </div>
-
-      <div class="cardContainer">
-        <div class="cardFront card9"></div>
-        <div class="cardBack"></div>
-      </div>
-
-    </div>
-  </main>
-  <div class="alert hidden">You win!
-    <button class="alertButton" onclick="resetStats();">reset game</button>
-  </div>
-<script src="assets/js/script.js"></script>
-</body>
-
-
+		<div class="alert belwelight hidden">
+			You win!
+			<button class="alertButton belwelight" onclick="resetStats();">
+				reset game
+			</button>
+		</div>
+		<script src="assets/js/script.js"></script>
+	</body>
 </html>

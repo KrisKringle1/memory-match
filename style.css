@@ -1,10 +1,21 @@
 body {
-  margin: 0;
-  background-image: url('./assets/images/saviors-board.png');
+
+  background-image: url('./assets/images/expansionBg-flat-7d0981e5817773ca153c92bd7bb882c9fe38cdd91acc3942a8b1bb5d607fca2a25f7236d526e81e2f1d288f2621765835f3069c3d9c4fcec4e74129693f9724b.jpg');
   background-size: cover;
+}
+@font-face {
+    font-family: 'belwelight';
+    src: url('./assets/belwe/BelweLightBT.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 
 }
 
+
+.belwelight{
+  font-family: 'belwelight';
+}
 
 * {
   box-sizing: border-box;
@@ -17,32 +28,69 @@ display: inline-block;
 width: 100%;
 text-align: center;
 font-size: 80px;
+  background: -webkit-linear-gradient(#73471C, #FCD237);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+font-weight: bold;
+
 }
 .main {
 
   height: 80vh;
-  display:flex;
+
+
 }
 
-.row {
 
+/* .row {
+width: 100%;
 height: calc(43.33% - 65px);
 margin: 10px;
-display: flex;
-justify-content: space-between;
-}
-.container{
-  height: 100%;
-  width: 100%;
+} */
 
+.container{
+  height: 85vh;
+  width: 80vw;
+  display: inline-block;
+}
+.stats{
+
+  font-size: large;
+}
+#stats1, #stats7 {
+
+background-image: linear-gradient(#73471C, #FCD237);
+border-radius: 50px;
+}
+#stats2 {
+background-image: linear-gradient(#73471C, #FCD237);
+border-radius: 50px;
+}
+#stats3{
+background-image: linear-gradient(#73471C, #EDA115);
+border-radius: 50px;
+}
+#stats4{
+background-image: linear-gradient(#7E7463, #EDA115);
+border-radius: 50px;
+}
+#stats5{
+background-image: linear-gradient(#73471C, #EDA115);
+border-radius: 50px;
+}
+#stats6{
+background-image: linear-gradient(#7E7463, #EDA115);
+border-radius: 50px;
 }
 
 .cardContainer{
 
-  height: 100%;
+
+  height: 30%;
   box-sizing: border-box;
   margin: 10px;
-  width: 10%;
+  width: 14%;
+
   display: inline-block;
   position: relative;
   perspective: 1000px;
@@ -54,66 +102,62 @@ justify-content: space-between;
   background-position: center; */
 
 }
-.cardBack{
-background-image: url('./assets/images/Card_back-Default.png');
-background-size: 100px;
 
-
-}
-.cardFront{
+.outerCard, .innerCard{
 
 background-repeat: no-repeat;
 background-position: center;
-background-size: cover;
+/* background-size: cover; */
 position: absolute;
 height: 100%;
 width: 100%;
-display: inline-block;
-backface-visibility: hidden;
-}
-.cardBack{
 
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-position: relative;
-height: 100%;
-width: 100%;
-/* transition: transform 0.8s;
-transform-style: preserve-3d; */
+/* display: inline-block; */
 }
+.innerCard{
+  background-size: contain;
+  /* background-size: 100px; */
+  display: inline-block;
 
-.cardFlip{
-  transform: rotateY(180deg);
 }
 
 .card1{
-  background-image: url('./assets/images/mysql-logo.jpg');
+  background-image: url('./assets/images/enUS_HighInquisitorWhitemane.png');
+  background-size: 135%;
+
 }
 .card2{
-  background-image: url('./assets/images/node-logo.png');
+  background-image: url('./assets/images/enUS_Brightwing.png');
+  background-size: 135%;
 }
 
 .card3{
-  background-image: url('./assets/images/gitHub-logo.png');
+  background-image: url('./assets/images/enUS_Siegebreaker.png');
+  background-size: 135%;
 }
 .card4{
-  background-image: url('./assets/images/docker-logo.jpg');
+  background-image: url('./assets/images/New_enUS_EVILMiscreant.png');
+  background-size: 89%;
 }
 .card5{
-  background-image: url('./assets/images/css-logo.png');
+  background-image: url('./assets/images/New_enUS_ArchivistElysiana.png');
+  background-size: 88%;
 }
 .card6{
-  background-image: url('./assets/images/html-logo.png');
+  background-image: url('./assets/images/ArchmageVargoth_enUS.png');
+  background-size: 135%;
 }
 .card7{
-  background-image: url('./assets/images/js-logo.png');
+  background-image: url('./assets/images/ArchVillainRafaam_enUS.png');
+  background-size: 135%;
 }
 .card8{
-  background-image: url('./assets/images/php-logo.jpeg');
+  background-image: url('./assets/images/BaristaLynchen_enUS.png');
+  background-size: 135%;
 }
 .card9{
-  background-image: url('./assets/images/react-logo.png');
+  background-image: url('./assets/images/AzeriteElemental_enUS.png');
+  background-size: 135%;
 }
 
 
@@ -122,7 +166,8 @@ transform-style: preserve-3d; */
   display:inline-block;
   text-align: center;
   width: calc(17% - 20px);
-  height: calc(98% - 20px);
+  height: 100%;
+  bottom: 8%;
   box-sizing: border-box;
   position: relative;
 }
@@ -137,15 +182,35 @@ text-align: center;
 }
 
 .alert{
-  height: 30%;
-  width: 30%;
+  height: 45%;
+  width: 40%;
   position: absolute;
-  top: 35%;
-  left: 37%;
-  background-image: url('https://media1.giphy.com/media/69pflI1DnDxBXnx9jS/giphy.gif?cid=790b7611245bbcb04ab998abb4ef3343e090dd5e05867377&rid=giphy.gif');
+  top: 31%;
+  left: 31%;
+  background-image: url('./assets/images/win-gif.gif');
+  background-size:cover;
   text-align: center;
-  display: inline-block;
-  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  font-size: 300%;
+  color: gold;
+
+}
+.introBox{
+  height: 78%;
+  width: 58%;
+  position: absolute;
+  top: 16%;
+  left: 23%;
+  background-image: url('./assets/images/hearthstone-opening-gif.gif');
+  background-size:cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 25px;
   font-size: 300%;
   color: gold;
 
@@ -153,10 +218,13 @@ text-align: center;
 .alertButton {
 height: 13%;
 width: 16%;
-
+background-image: linear-gradient(#73471C, #FCD237);
 position: absolute;
 top: 74%;
 left: 44%;
+padding: 5px;
+font-size: 15px;
+border-radius: 25px;
 
 }
 .hidden{
