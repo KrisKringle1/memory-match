@@ -25,5 +25,5 @@ https://www.memorymatch.kriscodes.net
 
 ## Preview
 
-![alt text](https://github.com/KrisKringle1/memory-match/blob/master/hearthstone-demo.gif?raw=true"Logo Title Text 1")
+![alt text](https://github.com/KrisKringle1/memory-match/blob/master/hearthstone-demo.gif?raw=true "Logo Title Text 1")
 
