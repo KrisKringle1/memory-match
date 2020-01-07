@@ -1,4 +1,15 @@
 $(document).ready(initializeApp);
+function checkDisplay() {
+	var ratio = $(window).height() / $(window).width();
+
+	if (ratio > 0.803488) {
+		$(".modal").css("display", "block");
+	} else {
+		$(".modal").css("display", "none");
+	}
+	console.log(ratio);
+}
+$(window).resize(checkDisplay);
 //global variables
 var firstCardClicked = null;
 var secondCardClicked = null;
@@ -148,4 +159,8 @@ function generateCards() {
 			)
 		);
 	}
+
+
+
+
 }
