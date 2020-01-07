@@ -1,7 +1,10 @@
+
 body {
   margin: 0;
+  height: 100vh;
   background-image: url('./assets/images/expansionBg-flat-7d0981e5817773ca153c92bd7bb882c9fe38cdd91acc3942a8b1bb5d607fca2a25f7236d526e81e2f1d288f2621765835f3069c3d9c4fcec4e74129693f9724b.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 @font-face {
     font-family: 'belwelight';
@@ -26,7 +29,7 @@ height: 15vh;
 display: inline-block;
 width: 100%;
 text-align: center;
-font-size: 80px;
+font-size: 608%;
   background: -webkit-linear-gradient(#73471C, #FCD237);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -34,21 +37,20 @@ font-weight: bold;
 
 }
 .main {
+  display: flex;
 
   height: 80vh;
 
 
 }
 
-/* .row {
-width: 100%;
-height: calc(43.33% - 65px);
-margin: 10px;
-} */
+
 .container{
-  height: 85vh;
-  width: 80vw;
-  display: inline-block;
+  height: 100%;
+  width: 83%;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 .stats{
 
@@ -85,18 +87,17 @@ border-radius: 50px;
   height: 30%;
   box-sizing: border-box;
   margin: 10px;
-  width: 14%;
-  display: inline-block;
+  width: 13%;
+  display: flex;
   position: relative;
-  /* background-image: url('/Users/krisringler/lfz/memory_match/assets/images/lfz-card.jpg');
-  background-size: cover;
-  background-position: center; */
-
 }
+
 .outerCard{
 background-image: url('./assets/images/Card_back-Legend-202x300.png');
 background-size: contain;
 display: inline-block;
+height: 100%;
+width: 100%;
 
 
 }
@@ -104,17 +105,15 @@ display: inline-block;
 
 background-repeat: no-repeat;
 background-position: center;
-/* background-size: cover; */
 position: absolute;
-height: 100%;
-width: 100%;
 
-/* display: inline-block; */
+
 }
 .innerCard{
   background-size: contain;
-  /* background-size: 100px; */
   display: inline-block;
+  height: 100%;
+width: 100%;
 }
 
 .card1{
@@ -225,4 +224,77 @@ border-radius: 25px;
 }
 .hidden{
   display: none;
+}
+/*landscape tablet*/
+@media (max-width: 1100px) {
+.stats{
+  height: 14%;
+}
+
+.introBox {
+  height: 78%;
+  width: 85%;
+  left: 7%;
+}
+.alert{
+    width: 62%;
+    left: 20%;
+  }
+.innerCard{
+  width: 117%;
+}
+}
+
+/*landscape phone view */
+@media (max-width: 850px){
+  .title {
+      font-size: 400%;
+      height: fit-content;
+    }
+  .alertButton {
+    width: 19%;
+    left: 41%;
+  }
+  .introBox {
+    height: 87%;
+    left: 23%;
+    width: 58%;
+
+  }
+
+  .stats {
+    width: 84%;
+    height: 31%;
+    margin: 13px;
+  }
+
+  .container {
+    height: 88%;
+    width: 86%;
+  }
+
+  .outerCard{
+    height: 166%;
+  }
+
+  .innerCard{
+    height: 162%;
+    width: 100%;
+  }
+
+  .main {
+    height: 68vh;
+  }
+  .cardContainer {
+    margin-bottom: 27px;
+    height:25%;
+  }
+  .alert{
+    height: 79%;
+    width: 62%;
+    top: 5%;
+    left: 20%;
+  }
+
+
 }

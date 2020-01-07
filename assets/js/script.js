@@ -5,7 +5,7 @@ var secondCardClicked = null;
 var matches = 0;
 var firstImage = null;
 var secondImage = null;
-var max_matches = 9;
+var max_matches = 1;
 var attempts = 0;
 var games_played = 0;
 var accuracy = 0;
@@ -52,9 +52,7 @@ function handleCardClick(event) {
 		secondImage = secondCardClicked.find(".innerCard").css("background-image");
 		//attempts incrementor
 
-		console.log(attempts);
 		if (firstImage === secondImage) {
-			console.log("its a match!");
 			//matches incrementor
 			matches++;
 			attempts++;
@@ -68,13 +66,13 @@ function handleCardClick(event) {
 			$(".cardContainer").unbind("click");
 			attempts++;
 			misMatchMusic.play();
-			setTimeout(function() {
+			setTimeout(function () {
 				firstCardClicked.css("pointer-events", "");
 				secondCardClicked.css("pointer-events", "");
 				$(".cardContainer").on("click", handleCardClick);
 				resetImages();
 			}, 1500);
-			console.log("keep trying!");
+
 		}
 
 		//alert to announce victory, needs to be changed to a div
@@ -101,7 +99,7 @@ function resetImages() {
 function calculateAccuracy() {
 	accuracy = (matches / attempts) * 100;
 
-	console.log(accuracy);
+
 }
 
 function displayStats() {
