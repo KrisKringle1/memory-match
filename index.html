@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="style.css" />
-		<!-- <script src="assets/js/script.js"></script> -->
-	</head>
-	<title>Memory Match</title>
-	<body>
-		<header class="title belwelight">Hearth Match</header>
-		<!--this is where the logo goes--->
 
-		<main class="main">
-			<aside class="sideBar">
-				<div class="stats belwelight" id="stats1">Game stats</div>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css" />
+	<!-- <script src="assets/js/script.js"></script> -->
+</head>
+<title>Memory Match</title>
 
-				<div class="stats belwelight" id="stats2">Games Played</div>
+<body>
+	<header class="title belwelight">Hearth Match</header>
+	<!--this is where the logo goes--->
 
-				<!--this will contain the text "games played"-->
-				<div class="stats belwelight gamesPlayed" id="stats3">0</div>
+	<main class="main">
+		<aside class="sideBar">
 
-				<!--this will contain the stat for games played-->
-				<div class="stats belwelight" id="stats4">Attempts</div>
 
-				<!--this will contain the text "attempts"-->
-				<div class="stats belwelight attemptsMade" id="stats5">0</div>
+			<div class="stats belwelight" id="stats2">Games Played <br><span class="gamesPlayed">0</span></div>
 
-				<!--this will contain the attempts stat-->
-				<div class="stats belwelight" id="stats6">Accuracy</div>
+			<!--this will contain the text "games played"-->
+			<!-- <div class="stats belwelight gamesPlayed" id="stats3">0</div> -->
 
-				<!--containing the text accuracy-->
-				<div class="stats belwelight gameAccuracy" id="stats7">0%</div>
+			<!--this will contain the stat for games played-->
+			<div class="stats belwelight" id="stats4">Attempts <br><span class="attemptsMade">0</span></div>
 
-				<!--contains the accuracy stats-->
-			</aside>
-			<!--this is just the title for the stats elements-->
+			<!--this will contain the text "attempts"-->
+			<!-- <div class="stats belwelight attemptsMade" id="stats5">0</div> -->
 
-			<!--adding a comment for test purposes-->
-			<div class="container"></div>
-		</main>
-		<div class="introBox belwelight">
-			Match 9 Cards to win! <br />
-			Click Here to Play!
-			<button class="alertButton belwelight" onclick="playIntroMusic();">
-				Start game
-			</button>
-		</div>
+			<!--this will contain the attempts stat-->
+			<div class="stats belwelight" id="stats6">Accuracy <br><span class="gameAccuracy">0%</span></div>
 
-		<div class="alert belwelight hidden">
-			You win!
-			<button class="alertButton belwelight" onclick="resetStats();">
-				reset game
-			</button>
-		</div>
-		<script src="assets/js/script.js"></script>
-	</body>
+			<!--containing the text accuracy-->
+			<!-- <div class="stats belwelight gameAccuracy" id="stats7">0%</div> -->
+
+			<!--contains the accuracy stats-->
+		</aside>
+		<!--this is just the title for the stats elements-->
+
+		<!--adding a comment for test purposes-->
+		<div class="container"></div>
+	</main>
+	<div class="introBox belwelight">
+		Match 9 Cards to win! <br />
+		Click Here to Play!
+		<button class="alertButton belwelight" onclick="playIntroMusic();">
+			Start game
+		</button>
+	</div>
+
+	<div class="alert belwelight hidden">
+		You win!
+		<button class="alertButton belwelight" onclick="resetStats();">
+			reset game
+		</button>
+	</div>
+	<script src="assets/js/script.js"></script>
+</body>
+
 </html>
