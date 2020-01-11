@@ -49,11 +49,14 @@ body {
 
 }
 
+
+
+
 .modal-error{
 margin: auto;
 }
 .title {
-
+user-select: none;
 height: 15vh;
 display: inline-block;
 width: 100%;
@@ -77,12 +80,12 @@ font-weight: bold;
 .container{
   height: 100%;
   width: 83%;
-
+  pointer-events: visiblePainted;
   display: flex;
   flex-wrap: wrap;
 }
 .stats{
-
+  user-select: none;
   font-size: large;
 }
 #stats1, #stats7 {
@@ -111,6 +114,10 @@ background-image: linear-gradient(#7E7463, #EDA115);
 border-radius: 50px;
 }
 
+.cardContainer:hover{
+  transform: translateY(-5px);
+}
+
 .cardContainer{
 
   height: 30%;
@@ -125,8 +132,9 @@ border-radius: 50px;
 background-image: url('./assets/images/Card_back-Legend-202x300.png');
 background-size: contain;
 display: inline-block;
-height: 100%;
+height: 112%;
 width: 100%;
+cursor: pointer;
 
 
 }
@@ -141,7 +149,7 @@ position: absolute;
 .innerCard{
   background-size: contain;
   display: inline-block;
-  height: 100%;
+  height: 99%;
 width: 100%;
 }
 
@@ -187,6 +195,7 @@ width: 100%;
 
 
 .sideBar{
+  pointer-events: none;
   display:inline-block;
   text-align: center;
   width: calc(17% - 20px);
@@ -223,6 +232,7 @@ text-align: center;
 
 }
 .introBox{
+  user-select: none;
   height: 78%;
   width: 58%;
   position: absolute;
@@ -230,6 +240,7 @@ text-align: center;
   left: 23%;
   background-image: url('./assets/images/hearthstone-opening-gif.gif');
   background-size:cover;
+  background-position: center;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -251,6 +262,12 @@ font-size: 15px;
 border-radius: 25px;
 
 }
+
+.alertButton:hover {
+  background-image: linear-gradient(#7E7463, #EDA115);
+
+}
+
 .hidden{
   display: none;
 }
@@ -273,9 +290,13 @@ border-radius: 25px;
   width: 117%;
 }
 }
-
+@media (max-width: 953px){
+  .stats {
+    font-size: small;
+  }
+}
 /*landscape phone view */
-@media (max-width: 850px){
+@media (max-width: 853px){
   .title {
       font-size: 400%;
       height: fit-content;
@@ -295,6 +316,7 @@ border-radius: 25px;
     width: 84%;
     height: 31%;
     margin: 13px;
+    font-size: small;
   }
 
   .container {
@@ -323,6 +345,9 @@ border-radius: 25px;
     width: 62%;
     top: 5%;
     left: 20%;
+  }
+  .sideBar {
+    font-size: x-small;
   }
 
 

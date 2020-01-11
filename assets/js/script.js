@@ -1,4 +1,5 @@
 $(document).ready(initializeApp);
+$(document).ready(checkDisplay)
 function checkDisplay() {
 	var ratio = $(window).height() / $(window).width();
 
@@ -7,7 +8,7 @@ function checkDisplay() {
 	} else {
 		$(".modal").css("display", "none");
 	}
-	console.log(ratio);
+
 }
 $(window).resize(checkDisplay);
 //global variables
@@ -23,21 +24,9 @@ var accuracy = 0;
 var gamesPlayedNumber = $(".gamesPlayed");
 var attemptsMade = $(".attemptsMade");
 var gameAccuracy = $(".gameAccuracy");
-var introMusic = new Audio(
-	"/Users/krisringler/lfz/memory_match/assets/media.io_Main_Title.mp3"
-);
-var winMusic = new Audio(
-	"/Users/krisringler/lfz/memory_match/assets/media.io_victory_jingle.mp3"
-);
-var matchMusic = new Audio(
-	"/Users/krisringler/lfz/memory_match/assets/media.io_CircleOfHealing_cast.mp3"
-);
-var misMatchMusic = new Audio(
-	"/Users/krisringler/lfz/memory_match/assets/media.io_misdirection_cast_01.mp3"
-);
 
 function playIntroMusic() {
-	introMusic.play();
+
 	$(".introBox").addClass("hidden");
 }
 
@@ -71,12 +60,10 @@ function handleCardClick(event) {
 			secondImage = null;
 			firstCardClicked = null;
 			secondCardClicked = null;
-			matchMusic.play();
 		} else {
 			//reset images after 1.5 seconds
 			$(".cardContainer").unbind("click");
 			attempts++;
-			misMatchMusic.play();
 			setTimeout(function () {
 				firstCardClicked.css("pointer-events", "");
 				secondCardClicked.css("pointer-events", "");
@@ -89,8 +76,6 @@ function handleCardClick(event) {
 		//alert to announce victory, needs to be changed to a div
 		//games played incrementor
 		if (matches === max_matches) {
-			winMusic.play();
-			introMusic.pause();
 			$(".alert").removeClass("hidden");
 		}
 		calculateAccuracy();
@@ -125,7 +110,13 @@ function resetStats() {
 	games_played++;
 	$(".alert").addClass("hidden");
 	$(".outerCard").removeClass("hidden");
+	$(".cardContainer").css("pointer-events", "auto");
 	displayStats();
+	$('.container').empty()
+
+	generateCards();
+	initializeApp();
+
 }
 
 function generateCards() {
