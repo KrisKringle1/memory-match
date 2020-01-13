@@ -304,6 +304,7 @@ border-radius: 25px;
   .alertButton {
     width: 19%;
     left: 41%;
+    font-size: small;
   }
   .introBox {
     height: 87%;
