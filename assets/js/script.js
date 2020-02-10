@@ -17,7 +17,7 @@ var secondCardClicked = null;
 var matches = 0;
 var firstImage = null;
 var secondImage = null;
-var max_matches = 9;
+var max_matches = 1;
 var attempts = 0;
 var games_played = 0;
 var accuracy = 0;
@@ -107,7 +107,12 @@ function displayStats() {
 function resetStats() {
 	matches = 0;
 	attempts = 0;
+	accuracy = 0;
 	games_played++;
+	displayStats();
+	$("gameAccuracy").text(accuracy)
+
+	$(".gamesPlayed").text(games_played);
 	$(".alert").addClass("hidden");
 	$(".outerCard").removeClass("hidden");
 	$(".cardContainer").css("pointer-events", "auto");
